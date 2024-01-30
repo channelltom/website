@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>tomchannell.com</title>
+  </head>
+  <body>
+    <div class="text-container">
+      <div class="name-container">
+        <h2>Tom Channell</h2>
+      </div>
+      <div class="links-container">
+        <ul class="links-list">
+          <li class="link">Github</li>
+          <li class="link">Linkedin</li>
+          <li class="link">Instagram</li>
+        </ul>
+      </div>
+      <div class="job-descritption-container">
+        <h3>Software Developer</h3>
+      </div>
+      <div class="location-container">
+        <h3>Hobart, Tasmania</h3>
+      </div>
+    </div>
+    <div class="gradient-bg">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
