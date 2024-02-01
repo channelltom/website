@@ -2,29 +2,89 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 :root {
-  --color-bg1: rgb(108, 0, 162);
-  --color-bg2: rgb(0, 17, 82);
+  --color-bg1: rgb(34, 0, 51);
+  --color-bg2: rgb(0, 26, 50);
+  --text-color: #efede2;
   --color1: 18, 113, 255;
-  --color2: 221, 74, 255;
-  --color3: 100, 220, 255;
-  --color4: 200, 50, 50;
-  --color5: 180, 180, 50;
-  --color-interactive: 140, 100, 255;
-  --circle-size: 80%;
+  --color2: 25, 150, 100;
+  --color3: 130, 50, 190;
+  --color4: 10, 50, 50;
+  --color5: 105, 250, 70;
+  --color-interactive: 150, 230, 250;
+  --circle-size: 80vw;
   --blending: hard-light;
 }
 
 .text-container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 300px;
   z-index: 100;
-  display: flex;
   position: absolute;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #efede2;
+}
+
+.name-container {
+  padding: 15px;
+}
+
+.job-location-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--text-color);
+  padding: 15px;
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
   left: 0;
+  background-color: var(--text-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0px 10px;
+}
+
+li {
+  list-style-type: none;
 }
 
 @keyframes moveInCirle {
@@ -80,6 +140,16 @@ svg {
   filter: url(#goo) blur(40px);
   width: 100%;
   height: 100%;
+}
+
+.g1,
+.g2,
+.g3,
+.g4,
+.g5,
+.interactive {
+  -webkit-filter: url(#goo) blur(40px);
+  filter: url(#goo) blur(40px);
 }
 
 .g1 {
